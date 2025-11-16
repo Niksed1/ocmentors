@@ -1,0 +1,28 @@
+[
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "icon": "/icons/chemistry.png"
+  },
+  {
+    "id": "math",
+    "name": "Math",
+    "icon": "/icons/math.png"
+  },
+  {
+    "id": "physics",
+    "name": "Physics",
+    "icon": "/icons/physics.png"
+  },
+  {
+    "id": "writing",
+    "name": "Writing",
+    "icon": "/icons/writing.png"
+  },
+  {
+    "id": "biology",
+    "name": "Biology",
+    "icon": "/icons/biology.png"
+  }
+]
+
