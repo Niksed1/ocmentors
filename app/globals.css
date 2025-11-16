@@ -3,19 +3,34 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* OC Mentors Color Palette */
+  --primary-green: #608150;
+  --accent-green: #7FDD53;
+  --white: #FFFFFF;
+  --dark-purple: #261E27;
+  --light-gray: #EDEDED;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* OC Mentors Color Palette - Tailwind mappings */
+  --color-primary-green: var(--primary-green);
+  --color-accent-green: var(--accent-green);
+  --color-white: var(--white);
+  --color-dark-purple: var(--dark-purple);
+  --color-light-gray: var(--light-gray);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #261E27;
+    --foreground: #EDEDED;
   }
 }
 
