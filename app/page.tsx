@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import subjectsData from "@/data/subjects.json";
 
 interface Subject {
@@ -14,11 +15,11 @@ export default function Home() {
   const subjects = subjectsData as Subject[];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center">
+      <main className="flex flex-1 items-center justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
           {/* Title */}
           <h2 className="text-3xl font-semibold text-dark-purple mb-12 text-center">
@@ -49,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

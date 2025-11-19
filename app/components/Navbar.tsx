@@ -21,19 +21,19 @@ export default function Navbar() {
   };
 
   const menuItems: MenuItem[] = [
-    { id: "about", label: "About us", href: "#about" },
-    { id: "subjects", label: "Subjects", href: "#subjects" },
-    { id: "tutors", label: "Tutors", href: "#tutors" },
-    { id: "faq", label: "FAQ", href: "#faq" },
+    { id: "about", label: "About", href: "/about" },
+    { id: "join-as-mentor", label: "Join as Mentor", href: "/join-as-mentor" },
+    { id: "book-a-session", label: "Book a Session", href: "/book-a-session" },
+    { id: "contact", label: "Contact", href: "/contact" },
   ];
 
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white sticky top-0 z-50">
+      <nav className="bg-white sticky top-0 z-50 relative">
         <div className="mx-auto max-w-7xl px-2 sm:px-3">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 relative">
               {/* Burger Menu Button */}
               <button
                 onClick={toggleMenu}
@@ -56,9 +56,33 @@ export default function Navbar() {
                   )}
                 </svg>
               </button>
-              <Link href="/" className="text-2xl font-bold text-primary-green hover:opacity-80 transition-opacity">
-                OC Mentors
+              <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <img
+                  src="/logo.png"
+                  alt="OC Mentors/Tutors"
+                  className="h-36 w-auto object-contain"
+                />
               </Link>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-md border border-light-gray overflow-hidden transform transition-all duration-300 ease-in-out z-50 ${
+                  isMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-2 pointer-events-none"
+                }`}
+              >
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block px-4 py-3 text-dark-purple hover:bg-primary-green/10 hover:text-primary-green transition-colors cursor-pointer border-b border-light-gray last:border-b-0"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <button className="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-dark-purple hover:text-primary-green hover:bg-primary-green/10 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2">
@@ -77,33 +101,13 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Side Menu Overlay */}
+      {/* Overlay to close menu when clicking outside */}
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 transition-opacity"
+          className="fixed inset-0 z-40"
           onClick={closeMenu}
         />
       )}
-
-      {/* Side Menu */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="flex flex-col h-full pt-16">
-          {menuItems.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              onClick={closeMenu}
-              className="px-6 py-4 text-dark-purple hover:bg-primary-green/10 hover:text-primary-green transition-colors cursor-pointer border-b border-light-gray"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </div>
     </>
   );
 }
