@@ -27,7 +27,7 @@ export default function BookASession() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#1A1D29' }}>
       <Navbar />
 
       {/* Main Content */}
@@ -35,17 +35,17 @@ export default function BookASession() {
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-dark-purple mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Book a Session
             </h1>
-            <p className="text-xl text-dark-purple/70">
+            <p className="text-xl text-white/70">
               Get started with personalized 1-on-1 tutoring
             </p>
           </div>
 
           {/* Info Section */}
-          <div className="mb-12 bg-light-gray/30 rounded-lg p-6 sm:p-8">
-            <h2 className="text-2xl font-semibold text-dark-purple mb-4 text-center">
+          <div className="mb-12 bg-white/10 rounded-lg p-6 sm:p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4 text-center">
               What to Expect
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -53,37 +53,37 @@ export default function BookASession() {
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-green text-white flex items-center justify-center text-sm font-bold mt-0.5">
                   ✓
                 </div>
-                <p className="text-dark-purple/80">1-on-1 specialized tutoring sessions</p>
+                <p className="text-white/80">1-on-1 specialized tutoring sessions</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-green text-white flex items-center justify-center text-sm font-bold mt-0.5">
                   ✓
                 </div>
-                <p className="text-dark-purple/80">Personalized learning plans</p>
+                <p className="text-white/80">Personalized learning plans</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-green text-white flex items-center justify-center text-sm font-bold mt-0.5">
                   ✓
                 </div>
-                <p className="text-dark-purple/80">Weekly sessions (3-4x recommended)</p>
+                <p className="text-white/80">Weekly sessions (3-4x recommended)</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-green text-white flex items-center justify-center text-sm font-bold mt-0.5">
                   ✓
                 </div>
-                <p className="text-dark-purple/80">Engaging study guides and resources</p>
+                <p className="text-white/80">Engaging study guides and resources</p>
               </div>
             </div>
           </div>
 
           {/* Booking Form */}
-          <div className="bg-white rounded-lg border-2 border-light-gray p-6 sm:p-8">
-            <h2 className="text-2xl font-semibold text-dark-purple mb-6 text-center">
+          <div className="bg-white/10 rounded-lg border-2 border-white/20 p-6 sm:p-8">
+            <h2 className="text-2xl font-semibold text-white mb-6 text-center">
               Request a Session
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Name *
                 </label>
                 <input
@@ -93,13 +93,13 @@ export default function BookASession() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email *
                 </label>
                 <input
@@ -109,13 +109,13 @@ export default function BookASession() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
                   Subject *
                 </label>
                 <select
@@ -124,7 +124,7 @@ export default function BookASession() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                 >
                   <option value="">Select a subject</option>
                   <option value="math">Mathematics</option>
@@ -138,7 +138,7 @@ export default function BookASession() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   Additional Information
                 </label>
                 <textarea
@@ -147,7 +147,7 @@ export default function BookASession() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="Tell us about your goals, preferred schedule, or any specific topics you'd like to focus on..."
                 />
               </div>
@@ -165,7 +165,7 @@ export default function BookASession() {
 
           {/* Alternative CTA */}
           <div className="mt-8 text-center">
-            <p className="text-dark-purple/70 mb-4">
+            <p className="text-white/70 mb-4">
               Or reach out directly through our Linktree
             </p>
             <a

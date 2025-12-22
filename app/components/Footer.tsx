@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-light-gray mt-auto">
+    <footer className="border-t border-white/20 mt-auto" style={{ backgroundColor: '#1A1D29' }}>
       <div className="mx-auto max-w-7xl px-2 sm:px-3 py-8">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <div className="text-sm text-dark-purple/60">
+          <div className="text-sm text-white/60">
             © {new Date().getFullYear()} OC Mentors. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
@@ -13,7 +13,7 @@ export default function Footer() {
               href="https://www.instagram.com/oc_mentors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-purple/60 hover:text-primary-green transition-colors"
+              className="text-white/60 hover:text-primary-green transition-colors"
               aria-label="Instagram"
             >
               <svg
@@ -29,7 +29,7 @@ export default function Footer() {
               href="https://www.linkedin.com/company/ocmentors/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-purple/60 hover:text-primary-green transition-colors"
+              className="text-white/60 hover:text-primary-green transition-colors"
               aria-label="LinkedIn"
             >
               <svg

@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#1A1D29' }}>
       <Navbar />
 
       {/* Main Content */}
@@ -35,21 +35,21 @@ export default function Contact() {
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-dark-purple mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Contact Us
             </h1>
-            <p className="text-xl text-dark-purple/70">
+            <p className="text-xl text-white/70">
               We'd love to hear from you
             </p>
           </div>
 
           {/* Contact Methods */}
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
-            <div className="bg-light-gray/50 rounded-lg p-6 border-l-4 border-primary-green">
-              <h3 className="text-xl font-semibold text-dark-purple mb-3">
+            <div className="bg-white/10 rounded-lg p-6 border-l-4 border-primary-green">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 Get in Touch
               </h3>
-              <p className="text-dark-purple/80 mb-4">
+              <p className="text-white/80 mb-4">
                 Have questions? Want to learn more about our services? We're here to help!
               </p>
               <a
@@ -62,11 +62,11 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="bg-light-gray/50 rounded-lg p-6 border-l-4 border-primary-green">
-              <h3 className="text-xl font-semibold text-dark-purple mb-3">
+            <div className="bg-white/10 rounded-lg p-6 border-l-4 border-primary-green">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 Social Media
               </h3>
-              <p className="text-dark-purple/80 mb-4">
+              <p className="text-white/80 mb-4">
                 Follow us on social media for updates, tips, and more!
               </p>
               <div className="flex gap-4">
@@ -74,7 +74,7 @@ export default function Contact() {
                   href="https://www.instagram.com/oc_mentors?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-dark-purple/60 hover:text-primary-green transition-colors"
+                  className="text-white/60 hover:text-primary-green transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -90,7 +90,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/company/ocmentors/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-dark-purple/60 hover:text-primary-green transition-colors"
+                  className="text-white/60 hover:text-primary-green transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -107,13 +107,13 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg border-2 border-light-gray p-6 sm:p-8">
-            <h2 className="text-2xl font-semibold text-dark-purple mb-6 text-center">
+          <div className="bg-white/10 rounded-lg border-2 border-white/20 p-6 sm:p-8">
+            <h2 className="text-2xl font-semibold text-white mb-6 text-center">
               Send us a Message
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Name *
                 </label>
                 <input
@@ -123,13 +123,13 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email *
                 </label>
                 <input
@@ -139,13 +139,13 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
                   Subject *
                 </label>
                 <select
@@ -154,7 +154,7 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                 >
                   <option value="">Select a subject</option>
                   <option value="general">General Inquiry</option>
@@ -166,7 +166,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-dark-purple mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   Message *
                 </label>
                 <textarea
@@ -176,7 +176,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-light-gray rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
+                  className="w-full px-4 py-2 bg-white border border-white/30 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-green focus:border-transparent text-dark-purple"
                   placeholder="Your message..."
                 />
               </div>

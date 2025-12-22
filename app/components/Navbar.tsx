@@ -30,14 +30,14 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white sticky top-0 z-50 relative">
+      <nav className="sticky top-0 z-50 relative" style={{ backgroundColor: '#1A1D29' }}>
         <div className="mx-auto max-w-7xl px-2 sm:px-3">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2 relative">
               {/* Burger Menu Button */}
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-dark-purple hover:text-primary-green hover:bg-primary-green/10 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2"
+                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-primary-green hover:bg-primary-green/10 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2"
                 aria-label="Toggle menu"
               >
                 <svg
@@ -56,28 +56,38 @@ export default function Navbar() {
                   )}
                 </svg>
               </button>
-              <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <Link 
+                href="/" 
+                className="flex items-center transition-all duration-200 group h-full"
+              >
                 <img
                   src="/logo.png"
                   alt="OC Mentors/Tutors"
-                  className="h-36 w-auto object-contain"
+                  className="h-12 w-auto object-contain transition-all duration-200 group-hover:brightness-150"
+                  style={{
+                    mixBlendMode: 'multiply',
+                    filter: 'brightness(1.1)',
+                    display: 'block',
+                    maxHeight: '100%'
+                  }}
                 />
               </Link>
 
               {/* Dropdown Menu */}
               <div
-                className={`absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-md border border-light-gray overflow-hidden transform transition-all duration-300 ease-in-out z-50 ${
+                className={`absolute top-full left-0 mt-1 w-48 shadow-lg rounded-md border border-white/20 overflow-hidden transform transition-all duration-300 ease-in-out z-50 ${
                   isMenuOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-2 pointer-events-none"
                 }`}
+                style={{ backgroundColor: '#1A1D29' }}
               >
                 {menuItems.map((item) => (
                   <Link
                     key={item.id}
                     href={item.href}
                     onClick={closeMenu}
-                    className="block px-4 py-3 text-dark-purple hover:bg-primary-green/10 hover:text-primary-green transition-colors cursor-pointer border-b border-light-gray last:border-b-0"
+                    className="block px-4 py-3 text-white hover:bg-primary-green/10 hover:text-primary-green transition-colors cursor-pointer border-b border-white/20 last:border-b-0"
                   >
                     {item.label}
                   </Link>
@@ -85,7 +95,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <button className="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-dark-purple hover:text-primary-green hover:bg-primary-green/10 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2">
+              <button className="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-white hover:text-primary-green hover:bg-primary-green/10 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2">
                 Login
               </button>
               <Link
