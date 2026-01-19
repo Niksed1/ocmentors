@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#1A1D29' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0F172A' }}>
       <Navbar />
 
       {/* Main Content */}
@@ -184,7 +184,7 @@ export default function Contact() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center px-8 py-3 rounded-full text-lg font-medium bg-primary-green text-white hover:bg-accent-green transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2"
+                  className="inline-flex items-center justify-center px-7 py-3 rounded-full text-base font-medium bg-primary-green text-white hover:bg-accent-green transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-green focus:ring-offset-2"
                 >
                   Send Message
                 </button>

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#1A1D29' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0F172A' }}>
       <Navbar />
 
       {/* Main Content */}

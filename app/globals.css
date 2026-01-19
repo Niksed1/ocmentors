@@ -1,27 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1A1D29;
-  --foreground: #EDEDED;
+  --background: #0F172A;
+  --foreground: #CBD5E1;
   
-  /* OC Mentors Color Palette */
-  --primary-green: #608150;
-  --accent-green: #7FDD53;
+  /* OC Mentors Modern Blue-Cyan Palette */
+  --primary-blue: #2563EB;
+  --cyan-accent: #22D3EE;
+  --deep-navy: #0F172A;
+  --midnight-blue: #020617;
+  --soft-slate-gray: #CBD5E1;
   --white: #FFFFFF;
-  --dark-purple: #261E27;
-  --light-gray: #EDEDED;
+  
+  /* Legacy support - mapping old green to new blue */
+  --primary-green: #2563EB;
+  --accent-green: #22D3EE;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* OC Mentors Color Palette - Tailwind mappings */
-  --color-primary-green: var(--primary-green);
-  --color-accent-green: var(--accent-green);
+  /* Modern Blue-Cyan Palette - Tailwind mappings */
+  --color-primary-blue: var(--primary-blue);
+  --color-cyan-accent: var(--cyan-accent);
+  --color-deep-navy: var(--deep-navy);
+  --color-midnight-blue: var(--midnight-blue);
+  --color-soft-slate-gray: var(--soft-slate-gray);
   --color-white: var(--white);
-  --color-dark-purple: var(--dark-purple);
-  --color-light-gray: var(--light-gray);
+  
+  /* Legacy support for existing components - mapped to new colors */
+  --color-primary-green: var(--primary-blue);
+  --color-accent-green: var(--cyan-accent);
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -29,8 +39,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #261E27;
-    --foreground: #EDEDED;
+    --background: #0F172A;
+    --foreground: #CBD5E1;
   }
 }
 
@@ -41,5 +51,5 @@ body {
 }
 
 .logo-hover:hover {
-  filter: brightness(1.5) drop-shadow(0 0 10px rgba(127, 221, 83, 0.8)) !important;
+  filter: brightness(1.5) drop-shadow(0 0 10px rgba(34, 211, 238, 0.8)) !important;
 }

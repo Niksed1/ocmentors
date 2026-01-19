@@ -22,6 +22,7 @@ export default function Navbar() {
 
   const menuItems: MenuItem[] = [
     { id: "about", label: "About", href: "/about" },
+    { id: "tutors", label: "Tutors", href: "/tutors" },
     { id: "join-as-mentor", label: "Join as Mentor", href: "/join-as-mentor" },
     { id: "book-a-session", label: "Book a Session", href: "/book-a-session" },
     { id: "contact", label: "Contact", href: "/contact" },
@@ -30,7 +31,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 relative" style={{ backgroundColor: '#1A1D29' }}>
+      <nav className="sticky top-0 z-50 relative" style={{ backgroundColor: '#0F172A' }}>
         <div className="mx-auto max-w-7xl px-2 sm:px-3">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2 relative">
@@ -80,7 +81,7 @@ export default function Navbar() {
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 -translate-y-2 pointer-events-none"
                 }`}
-                style={{ backgroundColor: '#1A1D29' }}
+                style={{ backgroundColor: '#0F172A' }}
               >
                 {menuItems.map((item) => (
                   <Link
